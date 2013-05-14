@@ -37,7 +37,7 @@ type Options struct {
 // NewSession is called by session stores to create a new session instance.
 func NewSession(store Store, name string) *Session {
 	return &Session{
-		Values: make(map[interface{}]interface{}),
+		Values: make(map[string]interface{}),
 		store:  store,
 		name:   name,
 	}
@@ -46,7 +46,7 @@ func NewSession(store Store, name string) *Session {
 // Session stores the values and optional configuration for a session.
 type Session struct {
 	ID      string
-	Values  map[interface{}]interface{}
+	Values  map[string]interface{}
 	Options *Options
 	IsNew   bool
 	store   Store
