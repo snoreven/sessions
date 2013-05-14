@@ -12,7 +12,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/gorilla/securecookie"
+	"github.com/snoreven/securecookie"
 )
 
 // Store is an interface for custom session stores.
